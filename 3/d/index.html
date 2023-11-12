@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3d</title>
+</head>
+<body>
+<input id="input" type="number">
+<input type="button" value="Thế kỉ" onclick="onClick()">
+<p id="result"></p>
+<script>
+  function onClick() {
+    let a = document.getElementById('input').value;
+    let s = a -100 + 1;
+    let t = parseInt(s/100);
+    document.getElementById('result').innerHTML = "thế kỷ thứ : " + t;
+  }
+</script>
+</body>
+</html>

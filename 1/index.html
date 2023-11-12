@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<input id="input" placeholder="nhập vào đây" type="number">
+<input type="button" value="in ra " onclick="onClick()">
+<p id="result">result</p>
+<script>
+  function onClick() {
+    let a = document.getElementById('input').value;
+    let aa = a ** 2;
+    document.getElementById('result').innerHTML ='result : ' + aa;
+  }
+</script>
+</body>
+</html>

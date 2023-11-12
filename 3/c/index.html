@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3c</title>
+</head>
+<body>
+<input id="inputA" type="number" placeholder="Nhập a vào đây">
+<input id="inputB" type="number" placeholder="Nhập b vào đây">
+<input type="button" value="tổng" onclick="onClick()">
+<p id="result"></p>
+<script>
+    function onClick() {
+        let a = parseInt(document.getElementById("inputA").value);
+    let b = parseInt(document.getElementById("inputB").value);
+    let total;
+    if (b>a) {
+        total="Tổng giá trị từ a đến b là "+((b+a)*(b-a+1))/2;
+        document.getElementById("result").innerText='result' + total;
+    }else {
+        total="Tổng giá trị từ b đến a là "+((b+a)*(a-b+1))/2;
+        document.getElementById("result").innerText='result' + total;
+    }
+
+    }
+</script>
+</body>
+</html>

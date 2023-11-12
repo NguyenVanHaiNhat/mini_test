@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3e</title>
+</head>
+<body>
+<h1>kiểm tra tam giác</h1>
+<input id="inputA" type="number" placeholder="Nhập a">
+<input id="inputB" type="number" placeholder="Nhập b">
+<input id="inputC" type="number" placeholder="Nhập c">
+<input type="button" value="kiểm tra" onclick="onClick()">
+<p id="result"></p>
+<script>
+  function onClick() {
+      let a = document.getElementById('inputA').value;
+      let b = document.getElementById('inputB').value;
+      let c = document.getElementById('inputC').value;
+      if (a + b < c || a + c < b || b + c < a) {
+          if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b) {
+              document.getElementById("result").innerText = "Đây là tam giác vuông";
+          } else if (a == b && b == c && a == c) {
+              document.getElementById("result").innerText = "Đây là tam giác đều";
+          } else if (a == b || b == c || a == c) {
+              document.getElementById("result").innerText = "Đây là tam giác cân";
+          } else {
+              document.getElementById("result").innerText = "Đây là hình tam giác";
+          }
+      } else {
+          document.getElementById("result").innerText = "Đây không phải là hình tam giác";
+      }
+  }
+</script>
+</body>
+</html>
